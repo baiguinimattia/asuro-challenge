@@ -1,0 +1,17 @@
+div.input-container {
+  input {
+    height: 2rem;
+    min-width: 12rem;
+    flex: 1;
+    border: 2px solid gray;
+    margin: 0.3rem;
+    margin-bottom: 0;
+    padding: 0.25rem;
+  }
+  .hidden {
+    display: none;
+  }
+
+  app-auto-complete {
+  }
+}

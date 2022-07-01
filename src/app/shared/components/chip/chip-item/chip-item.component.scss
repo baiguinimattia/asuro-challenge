@@ -1,0 +1,22 @@
+.chip-item-container {
+  background-color: rgb(189, 185, 185);
+  display: inline-block;
+  padding: 0.75rem;
+  border-radius: 15px;
+  margin: 0 0.25rem;
+  height: inherit;
+  width: inherit;
+  .value {
+    padding: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+  #close-element {
+    border-radius: 15px;
+    color: #fff;
+    background-color: gray;
+    padding: 3px 6px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

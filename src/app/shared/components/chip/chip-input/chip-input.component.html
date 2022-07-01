@@ -1,1 +1,14 @@
-<p>chip-input works!</p>
+<form [formGroup]="form" (submit)="submit()">
+  <div class="input-container">
+    <input
+      id="input"
+      type="text"
+      value="Type a programming language"
+      formControlName="value"
+      (click)="removeDefaultValue($event)"
+      (focusin)="focusInFunction()"
+    />
+    <app-auto-complete *ngIf="isActive" [query]="query"></app-auto-complete>
+    <button type="submit" class="hidden"></button>
+  </div>
+</form>
