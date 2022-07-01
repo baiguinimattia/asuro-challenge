@@ -1,4 +1,8 @@
-<div class="chip-list-container" *ngIf="chipList$ | async as chips">
+<div
+  class="chip-list-container"
+  *ngIf="chipList$ | async as chips"
+  (click)="onTouched()"
+>
   <app-chip-item *ngFor="let chip of chips" [value]="chip"></app-chip-item>
   <app-chip-input (addChip)="addChip($event)"></app-chip-input>
 </div>
