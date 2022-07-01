@@ -27,12 +27,6 @@ export class ChipInputComponent implements OnInit, OnDestroy {
     this.form = new FormGroup({ value: new FormControl(defaultInputValue) });
     this.addChip = new EventEmitter<string>();
     this.subs$ = new Subscription();
-
-    this.form.valueChanges.subscribe({
-      next(res) {
-        console.log(res.value);
-      },
-    });
   }
   ngOnDestroy(): void {
     this.subs$.unsubscribe();
@@ -81,7 +75,6 @@ export class ChipInputComponent implements OnInit, OnDestroy {
 
   public focusInFunction(): void {
     if (this.isFirstClick) {
-      console.log('e groasa');
       this.setControl = '';
     }
     this.isActive = true;
